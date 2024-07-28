@@ -1,5 +1,8 @@
 .container,
 .main,
+.sidebar,
+.sidebar-menu,
+.sidebar-others,
 .project,
 .trending {
     display: grid;
@@ -8,4 +11,61 @@
 .main {
     grid-template-columns: 300px 4fr;
     grid-template-rows: 200px 1fr;
+}
+
+.sidebar {
+    background-color: var(--primary);
+    grid-row: span 3;
+}
+
+.sidebar-title,
+.menu-item,
+.others-item,
+.search,
+.user-account,
+.main-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar {
+    align-content: start;
+    color: var(--text-white);
+    gap: 50px;
+}
+
+.sidebar-title,
+.sidebar-menu,
+.sidebar-others {
+    padding: 1rem;
+}
+
+.sidebar-title p {
+    font-size: 28px;
+}
+
+.sidebar-title p,
+.menu-item p,
+.others-item p {
+    font-weight: 700;
+}
+
+.menu-item p,
+.others-item p {
+    font-size: 20px;
+}
+
+
+
+.sidebar-menu,
+.sidebar-others {
+    gap: 12px;
+}
+
+
+
+footer,
+.contents {
+    background-color: var(--background);
 }
