@@ -1,0 +1,11 @@
+.container,
+.main,
+.project,
+.trending {
+    display: grid;
+}
+
+.main {
+    grid-template-columns: 300px 4fr;
+    grid-template-rows: 200px 1fr;
+}
