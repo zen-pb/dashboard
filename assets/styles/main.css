@@ -3,6 +3,7 @@
 .sidebar,
 .sidebar-menu,
 .sidebar-others,
+header,
 .project,
 .trending {
     display: grid;
@@ -23,7 +24,8 @@
 .others-item,
 .search,
 .user-account,
-.main-header {
+.main-header,
+.action-btns {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -37,17 +39,23 @@
 
 .sidebar-title,
 .sidebar-menu,
-.sidebar-others {
+.sidebar-others,
+.search,
+.user-account,
+.main-header,
+.action-btns {
     padding: 1rem;
 }
 
-.sidebar-title p {
+.sidebar-title p,
+.user-name {
     font-size: 28px;
 }
 
 .sidebar-title p,
 .menu-item p,
-.others-item p {
+.others-item p,
+.main-header p {
     font-weight: 700;
 }
 
@@ -56,11 +64,56 @@
     font-size: 20px;
 }
 
-
-
 .sidebar-menu,
 .sidebar-others {
     gap: 12px;
+}
+
+header {
+    grid-template-columns: 1fr 500px;
+}
+
+.search input {
+    border: none;
+    border-radius: 20px;
+    width: 700px;
+    height: 35px;
+    background-color: var(--background);
+}
+
+.user-account p {
+    font-size: 18px;
+}
+
+.user-account p,
+.action-btns {
+    font-weight: 600;
+}
+
+.search,
+.user-account,
+.main-header,
+.action-btns {
+    padding-inline: 4rem;
+}
+
+.user-account,
+.main-header {
+    gap: 1.5rem;  
+}
+
+.action-btns {
+    justify-content: center;
+    gap: 30px;
+}
+
+.action-btns button {
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 0.75rem;
+    width: 6rem;
+    background-color: var(--primary);
+    color: var(--text-white);
 }
 
 
