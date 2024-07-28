@@ -12,12 +12,17 @@ header,
 
 .main {
     grid-template-columns: 300px 4fr;
+    height: 100vh;
 }
 
 .sidebar {
     box-shadow: 15px 0px 15px -15px rgba(0, 0, 0, 0.3);
     background-color: var(--primary);
     grid-row: span 3;
+}
+
+.sidebar footer {
+    margin-top: 30vh;
 }
 
 .sidebar-title,
@@ -67,8 +72,14 @@ header,
     font-size: 20px;
 }
 
+.menu-item p,
+.others-item p {
+    height: 26px;
+}
+
 .sidebar-menu,
 .sidebar-others,
+.search,
 .user {
     gap: 12px;
 }
@@ -78,6 +89,7 @@ header {
 }
 
 .search input {
+    padding: 0 1rem;
     border: none;
     border-radius: 20px;
     width: 700px;
@@ -85,8 +97,8 @@ header {
     background-color: var(--background);
 }
 
-.user-account p {
-    font-size: 18px;
+.user-account {
+  justify-content: flex-end;
 }
 
 .user-account p,
@@ -128,9 +140,10 @@ header {
 
 .contents {
     grid-template-columns: 1fr 400px;
-    padding: 0 3rem;
+    padding: 0 3rem 1rem 3rem;
     box-shadow: inset 0px 15px 15px -15px rgba(0, 0, 0, 0.3);
     gap: 0 1rem;
+    grid-row: span 2;
 }
 
 .head-title {
@@ -151,7 +164,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    height: 250px;
+    height: 225px;
     border-left: 12px solid var(--accent);
 }
 
@@ -187,7 +200,6 @@ header {
     display: flex;
 }
 
-footer,
 .contents {
     background-color: var(--background);
 }
