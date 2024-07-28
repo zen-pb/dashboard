@@ -8,16 +8,39 @@
     --text-white: #FFFFFF;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
 body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Inter';
     font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+h1, h2, h3, h4, h5 {
     font-family: 'Inter';
     font-weight: 700;
 }
@@ -25,7 +48,6 @@ h5 {
 html {
     font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
 }
-
 
 h1 {
     font-size: 4.210rem;
