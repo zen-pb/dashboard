@@ -4,6 +4,7 @@
 .sidebar-menu,
 .sidebar-others,
 header,
+.contents,
 .project,
 .trending {
     display: grid;
@@ -11,10 +12,11 @@ header,
 
 .main {
     grid-template-columns: 300px 4fr;
-    grid-template-rows: 200px 1fr;
+    /* grid-template-rows: 200px 1fr; */
 }
 
 .sidebar {
+    box-shadow: 15px 0px 15px -15px rgba(0, 0, 0, 0.3);
     background-color: var(--primary);
     grid-row: span 3;
 }
@@ -28,10 +30,10 @@ header,
 .action-btns {
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 .sidebar {
+    padding: 0 1rem;
     align-content: start;
     color: var(--text-white);
     gap: 50px;
@@ -43,7 +45,8 @@ header,
 .search,
 .user-account,
 .main-header,
-.action-btns {
+.action-btns,
+.contents {
     padding: 1rem;
 }
 
@@ -60,12 +63,14 @@ header,
 }
 
 .menu-item p,
-.others-item p {
+.others-item p,
+.head-title {
     font-size: 20px;
 }
 
 .sidebar-menu,
-.sidebar-others {
+.sidebar-others,
+.user {
     gap: 12px;
 }
 
@@ -86,7 +91,9 @@ header {
 }
 
 .user-account p,
-.action-btns {
+.action-btns,
+.head-title,
+.item-title {
     font-weight: 600;
 }
 
@@ -97,9 +104,13 @@ header {
     padding-inline: 4rem;
 }
 
+.sidebar-title,
+.menu-item,
+.others-item,
 .user-account,
-.main-header {
-    gap: 1.5rem;  
+.main-header,
+.trending {
+    gap: 1.5rem;
 }
 
 .action-btns {
@@ -116,7 +127,66 @@ header {
     color: var(--text-white);
 }
 
+.contents {
+    grid-template-columns: 1fr 400px;
+    padding: 0 3rem;
+    box-shadow: inset 0px 15px 15px -15px rgba(0, 0, 0, 0.3);
+    gap: 0 1rem;
+}
 
+.head-title {
+    padding: 2rem 0 1rem 0;
+}
+
+.projects {
+    grid-row: span 2;
+}
+
+.project {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.project .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 250px;
+    border-left: 12px solid var(--accent);
+}
+
+.item-subtitle,
+.user-project {
+    color: var(--text-subtitle);
+}
+
+.item-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: end;
+}
+
+.announcement,
+.trending {
+    padding: 2rem;
+}
+
+.announcement {
+    gap: 1rem;
+}
+
+.project .item,
+.announcement,
+.trending {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.user {
+    display: flex;
+}
 
 footer,
 .contents {
