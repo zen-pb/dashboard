@@ -4,11 +4,15 @@
     --background: #E2E8F0;
     --primary: #1992D4;
     --secondary: #FFFFFF;
+    --accent: #F0B429;
 
     --text-white: #FFFFFF;
+    --text-subtitle: #636363;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -23,7 +27,11 @@ body {
     font-weight: 400;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
@@ -32,19 +40,57 @@ img[alt="User Profile Pic"] {
     border-radius: 50%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
     isolation: isolate;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Inter';
     font-weight: 700;
+}
+
+footer {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+    text-align: center;
+
+    a:hover {
+        animation: rotate .5s forwards;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
 }
