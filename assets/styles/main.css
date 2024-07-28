@@ -12,7 +12,6 @@ header,
 
 .main {
     grid-template-columns: 300px 4fr;
-    /* grid-template-rows: 200px 1fr; */
 }
 
 .sidebar {
