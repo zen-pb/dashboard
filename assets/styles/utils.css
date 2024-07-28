@@ -28,6 +28,10 @@ img, picture, video, canvas, svg {
     max-width: 100%;
 }
 
+img[alt="User Profile Pic"] {
+    border-radius: 50%;
+}
+
 input, button, textarea, select {
     font: inherit;
 }
